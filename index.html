@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/dist/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+
+  <title>NotePad App By Mohavi</title>
+</head>
+<body>
+ <header class="header">
+  <h1>NotePad</h1>
+  <div class="headBtn">
+  <button class="add"><i class="ri-add-large-line"></i></button>
+  <i class="ri-calendar-line"></i></div>
+  
+ </header>  
+
+  <div class="wrapper">
+<!-- notes part -->
+ <div dir="rtl" class="noteArea ">
+ </div>
+<!-- time -->
+ <div class="dateArea">
+  <h2 dir="rtl">Date</h2>
+ 
+ </div>
+
+  </div>
+
+
+<!-- add new note modal -->
+<div class="newNote">
+  <h2>Write your Note</h2>
+  <button class="close"><i class="ri-close-large-line"></i></button>
+  <textarea name="text" rows="10" cols="45"  id="text"></textarea>
+  <button class="saveNote">Save</button>
+</div>
+<script src="./assets/dist/js/app.js"></script>
+</body>
+</html>

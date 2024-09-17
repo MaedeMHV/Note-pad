@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply bg-stone-50  h-screen overflow-hidden}
+
+/* header */
+.header{
+    @apply h-[10%] w-screen bg-purple-800 flex justify-between items-center p-10 m-0 z-20 ;
+    box-shadow: 0 4px 2px -2px gray; 
+}
+.header h1{
+    @apply text-white text-4xl font-semibold font-Oswald
+}
+.header .headBtn .add i{
+    @apply text-3xl md:text-4xl text-white
+}
+.headBtn .ri-calendar-line{
+    @apply md:hidden flex text-3xl text-white
+}
+.headBtn{
+    @apply flex flex-row gap-5 
+}
+/* note modal */
+.newNote.show{
+    @apply h-[600px] w-[400px] flex flex-col items-center rounded-md justify-center gap-9  
+     shadow-md shadow-stone-600 absolute m-auto inset-0  duration-300 transition-all transform ease-out;
+    background: #fafafa;
+    
+}
+.newNote.show .close{
+@apply absolute top-6 left-8 text-2xl text-purple-50 border-2 rounded-full border-purple-800 w-10 h-10 bg-purple-800
+}
+.newNote .saveNote{
+    @apply bg-purple-900 text-white font-extrabold px-10 py-3 rounded-md 
+}
+.newNote #text{
+    @apply border-[1px]  border-stone-400  rounded-md p-3 focus:outline-purple-800 valid:outline-purple-800;
+}
+.newNote h2{
+    @apply font-extrabold text-2xl text-stone-700 font-Oswald capitalize
+}
+.newNote {
+    @apply hidden duration-300 transition-all transform ease-out
+}
+
+
+/* date part */
+.wrapper{
+    @apply h-[90%] m-0 mt-1 p-0 flex flex-row z-10;
+
+}
+.noteArea{
+    @apply flex flex-row gap-10 h-full w-full p-10 flex-wrap justify-center items-center md:items-start md:justify-start bg-cover 
+     bg-stone-200
+   
+}
+.noteArea.DeAct{
+    @apply hidden flex-row gap-10 h-full w-full p-10 flex-wrap justify-center items-center md:items-start md:justify-start
+}
+.dateArea{
+    @apply w-[300px] h-full  p-5 md:flex flex-col gap-5 items-stretch justify-start hidden duration-200 ease-in bg-stone-50 ;
+    
+    
+    -webkit-box-shadow: -5px 5px 11px -5px rgba(21, 20, 20, 0.177);
+    -moz-box-shadow: -5px 5px 11px -5px rgba(0, 0, 0, 0.142);
+    box-shadow: -5px 5px 11px -5px rgba(0, 0, 0, 0.251);
+}
+.dateArea.Act{
+    @apply w-full h-full  p-5 md:flex flex-col gap-5 items-stretch justify-start flex duration-200 ease-in ;
+    background: #efecef;
+    -webkit-box-shadow: -5px 5px 11px -5px rgba(21, 20, 20, 0.177);
+    -moz-box-shadow: -5px 5px 11px -5px rgba(0, 0, 0, 0.142);
+    box-shadow: -5px 5px 11px -5px rgba(0, 0, 0, 0.251);
+}
+
+.dateArea h2{
+    @apply font-bold text-2xl text-stone-700  self-center 
+}
+.dateArea p{
+    @apply py-4 px-2 bg-stone-100 rounded-md text-center shadow-md outline outline-[3px] outline-offset-4 outline-purple-700 font-Oswald text-stone-700
+}
+
+/* notes Area */
+.noteArea .note{
+    @apply w-[250px] h-[250px] shadow-lg bg-white flex flex-col gap-0 overflow-y-auto  shrink-0 
+}
+.noteArea .note .noteHead{
+    @apply h-[10%] w-full bg-purple-800 text-white  text-xs flex flex-row  items-center p-3 justify-between
+}
+
+.note .noteHead i{
+    @apply text-xs text-white pr-3
+}
+
+.note .noteBody{
+    @apply w-full h-full overflow-hidden
+}
+.note .noteBody p{
+    @apply text-sm text-neutral-800 leading-6  p-5 w-full h-full  break-all
+}
